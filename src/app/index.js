@@ -1,38 +1,23 @@
-
-
-const http = require("https");
-
 function getMyData() {
-	
-	const options = {
+
+	const settings = {
+		"async": true,
+		"crossDomain": true,
+		"url": "https://call-of-duty-modern-warfare.p.rapidapi.com/warzone/lilindian14%25231756/battle",
 		"method": "GET",
-		"hostname": "call-of-duty-modern-warfare.p.rapidapi.com",
-		"port": null,
-		"path": "/warzone/lilindian14%25231756/battle",
 		"headers": {
 			"x-rapidapi-key": "3f4b8156f4msh96d515818424e6ep1a335bjsna27d1d384af9",
-			"x-rapidapi-host": "call-of-duty-modern-warfare.p.rapidapi.com",
-			"useQueryString": true
+			"x-rapidapi-host": "call-of-duty-modern-warfare.p.rapidapi.com"
 		}
 	};
-	const req = http.request(options, function (res) {
-		const chunks = [];
 
-		res.on("data", function (chunk) {
-			chunks.push(chunk);
-		});
+	$.ajax(settings).done(function (response) {
+		console.log(response);
 
-		res.on("end", function () {
-			const body = Buffer.concat(chunks);
-			console.log(body.toString());
-
-			var statsBlob = document.getElementById('statsJSON');
-			statsBlob.innerHTML = body.toString();
-		});
+		var statBlob = document.getElementById('statsJSON');
+		var errorMessage = "Error? " + response.error + "<br>";
+		statBlob.innerHTML = (errorMessage + response.message);
 	});
-
-	req.end();
-
 }
 
 
