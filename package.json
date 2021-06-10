@@ -1,0 +1,27 @@
+{
+  "name": "warzonestattracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nw src/",
+    "prod": "nwbuild --platforms win32 --buildDir dist/ src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lilindian16/warzoneStatTracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lilindian16/warzoneStatTracker/issues"
+  },
+  "homepage": "https://github.com/lilindian16/warzoneStatTracker#readme",
+  "devDependencies": {
+    "nw": "^0.53.1",
+    "nw-builder": "^3.5.7"
+  },
+  "dependencies": {
+    "https": "^1.0.0"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "warzonestattracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "views/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lilindian16/warzoneStatTracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lilindian16/warzoneStatTracker/issues"
+  },
+  "homepage": "https://github.com/lilindian16/warzoneStatTracker#readme"
+}
